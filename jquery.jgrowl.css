@@ -1,4 +1,3 @@
-
 div.jGrowl {
 	z-index: 			9999;
 	color: 				#fff;
@@ -81,9 +80,10 @@ div.center div.jGrowl-notification, div.center div.jGrowl-closer {
 
 div.jGrowl div.jGrowl-notification, div.jGrowl div.jGrowl-closer {
 	background-color: 		#000;
+    border:                 1px solid #000;
 	opacity: 				.85;
 	-ms-filter: 			"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"; 
-	filter: 				progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+	filter: 				progid:DXImageTransform.Microsoft.Alpha(Opacity=85); 
 	zoom: 					1;
 	width: 					235px;
 	padding: 				10px;
@@ -97,6 +97,37 @@ div.jGrowl div.jGrowl-notification, div.jGrowl div.jGrowl-closer {
 	-webkit-border-radius:	5px;
 }
 
+div.jGrowl div.jGrowl-notification.white {
+    background-color: 		#fff;
+    border-color:           #ccc;
+    color:                  #333;
+}
+
+div.jGrowl div.jGrowl-notification.blue {
+    background-color: 		#428bca;
+    border-color:           #357ebd;
+}
+
+div.jGrowl div.jGrowl-notification.green {
+    background-color: 		#5cb85c;
+    border-color:           #4cae4c;
+}
+
+div.jGrowl div.jGrowl-notification.celeste {
+    background-color: 		#5bc0de;
+    border-color:           #46b8da;
+}
+
+div.jGrowl div.jGrowl-notification.orange {
+    background-color: 		#f0ad4e;
+    border-color:           #eea236;
+}
+
+div.jGrowl div.jGrowl-notification.red {
+    background-color: 		#d9534f;
+    border-color:           #d43f3a;
+}
+
 div.jGrowl div.jGrowl-notification {
 	min-height: 			40px;
 }
@@ -104,11 +135,6 @@ div.jGrowl div.jGrowl-notification {
 div.jGrowl div.jGrowl-notification,
 div.jGrowl div.jGrowl-closer {
 	margin: 				10px;
-}
-
-div.jGrowl div.jGrowl-notification div.jGrowl-header {
-	font-weight: 			bold;
-	font-size:				.85em;
 }
 
 div.jGrowl div.jGrowl-notification div.jGrowl-close {
@@ -126,39 +152,6 @@ div.jGrowl div.jGrowl-closer {
 	font-size:				.9em;
 	font-weight: 			bold;
 	text-align: 			center;
-}
-
-/** Bootstrap stylings **/
-.growl-info {
-	background-color: #d9edf7 !important;
-	border: 1px solid #bce8f1;
-	color: #3a87ad;
-	filter: none !important;
-	opacity: 1 !important;
-}
-
-.growl-warning {
-	background-color: #fcf8e3 !important;
-	border: 1px solid #fbeed5;
-	color: #c09853;
-	filter: none !important;
-	opacity: 1 !important;
-}
-
-.growl-error {
-	background-color: #f2dede !important;
-	border: 1px solid #eed3d7;
-	color: #b94a48;
-	filter: none !important;
-	opacity: 1 !important;
-}
-
-.growl-success {
-	background-color: #dff0d8 !important;
-	border: 1px solid #d6e9c6;
-	color: #468847;
-	filter: none !important;
-	opacity: 1 !important;
 }
 
 /** Hide jGrowl when printing **/
