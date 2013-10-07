@@ -170,12 +170,10 @@
 		/** Default JGrowl Settings **/
 		defaults: {
 			pool:				0,
-			header:				'',
 			group:				'',
 			sticky:				false,
 			position: 			'top-right',
 			glue:				'after',
-			alertClass:			'',
 			theme:				'default',
 			themeState:			'highlight',
 			corners:			'10px',
@@ -187,6 +185,8 @@
 			closer: 			true,
 			closeTemplate: 		'&times;',
 			closerTemplate: 	'<div>[ close all ]</div>',
+            color:              '',
+            icon:               '',
 			log:				function() {},
 			beforeOpen:			function() {},
 			afterOpen:			function() {},
@@ -233,10 +233,9 @@
 			o.themeState = (o.themeState == '') ? '' : 'ui-state-' + o.themeState;
 
 			var notification = $('<div/>')
-				.addClass('jGrowl-notification ' + o.themeState + ' ui-corner-all' + ((o.group != undefined && o.group != '') ? ' ' + o.group : '') + ' growl-' + o.alertClass)
+				.addClass('jGrowl-notification ' + o.color + ' ' + o.themeState + ' ui-corner-all' + ((o.group != undefined && o.group != '') ? ' ' + o.group : ''))
 				.append($('<div/>').addClass('jGrowl-close').html(o.closeTemplate))
-				.append($('<div/>').addClass('jGrowl-header').html(o.header))
-				.append($('<div/>').addClass('jGrowl-message').html(message))
+				.append($('<div/>').addClass('jGrowl-message').html(message).prepend('<span class="' + o.icon + '"></span> '))
 				.data("jGrowl", o).addClass(o.theme).children('div.jGrowl-close').bind("click.jGrowl", function() {
 					$(this).parent().trigger('jGrowl.beforeClose');
 				})
